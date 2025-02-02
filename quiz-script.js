@@ -453,6 +453,8 @@ document.getElementById("submit-btn").addEventListener("click", function() {
     } else {
         feedbackContainer.textContent = "Incorrect.";
     }
+
+    const explanationsContainer = document.createElement("div");
     
     quizData[currentQuestion].options.forEach((option, index) => {
         const explanationElement = document.createElement("p");
@@ -460,6 +462,8 @@ document.getElementById("submit-btn").addEventListener("click", function() {
         explanationsContainer.appendChild(explanationElement);
     });
 
+    feedbackContainer.appendChild(explanationsContainer);
+    
     document.getElementById("submit-btn").style.display = "none";
     document.getElementById("next-btn").style.display = "block";
 
