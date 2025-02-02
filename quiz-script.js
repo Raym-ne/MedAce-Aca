@@ -466,7 +466,7 @@ document.getElementById("submit-btn").addEventListener("click", function() {
      if (currentQuestion === quizData.length - 1) {
         document.getElementById("next-btn").textContent = "Finish";
         const score = quizData[currentQuestion].correct ? score + 1 : score;
-        window.location.replace('results.html?score=${score}$total=${quizData.length');
+        window.location.href = 'results.html?score=${score}$total=${quizData.length}';
     }
 });
 
