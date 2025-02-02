@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quiz Results</title>
+    </head>
+
+    <body>
+        <h1>Quiz Results</h1>
+        <p id="results-comment"></p>
+        <script>
+
+            const score = parseInt(urlParams.get('score'));
+            const total = parseInt(urlParams.get('total'));
+
+            const resultsComment = document.getElementById('results-comment');
+            if (score >= total * 1) {
+                resultsComment.textContent = 'Outstanding! You have mastered diabetes mellitus. A little more refinment, and you will be unstoppable! You scored ' + score + ' out of ' + total +'.';
+            } else if (score >= total * 0.833) {
+                resultsComment.textContent = 'Great job! You have a strong grasp of diabetes mellitus. A little more refinement, and you eill be unstoppable! You scored ' + score + ' out of ' + total + '.';
+            } else if (score >= total * 0.666) {
+                resultsComment.textContent = 'Well done! You have a solid understanding, but there is room for improvemnt. Keep pushing! You scored ' + score + ' out of ' + total + '.';
+            } else if (score >= total * 0.5) {
+                resultsComment.textContent = 'You are getting there! Review the weak areas, and you will be on top in no time! You scored ' + score + ' out of ' + total + '.';
+            } else {
+                resultsComment.textContent = 'Keep going! This is a stepping stone to mastery. Review, practice and come back stronger! You scored ' + score + ' out of ' + total + '.';
+            }
+
+        </script>
+    </body>
+</html>
