@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.welcome-container {
+    width: 90%;
+    margin: 40px auto;
+    text-align: center;
+    font-size: 40px;
+}
+
+#index-page h2{
+    color: red;
+    font-size: 43px;
+}
+
+#play-quiz-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 200px;
+    height: 50px;
+    font-size: 24px;
+}
+
+#play-quiz-btn:hover {
+    background-color: #3e8e41;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+#index-page{
+    background-image: url('IMAGES/Med\ 4.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+}
+
+.quiz-container {
+    width: 80%;
+    margin: 40px auto;
+}
+
+#question-container {
+    margin-bottom: 20px;
+    color: black;
+}
+
+#feedback-container {
+    margin-bottom: 20px;
+}
+
+#submit-btn, #next-btn, #previous-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#submit-btn:hover, #next-btn:hover {
+    background-color: #3e8e41;
+}
+
+#previous-btn{
+    background-color: red;
+    margin-top: 10px;
+}
+
+
+/* Logo */
+header{
+    width: 100%;
+    height: 50px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+header img{
+    width: 100px;
+    height: 80px;
+    margin: 0;
+}
+
+/* Responsive media */
+@media (max-width: 480px) {
+    .quiz-container {
+        width: 90%;
+        margin: 20px auto;
+    }
+    button {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .quiz-container {
+        width: 85px;
+        margin: 30px auto;
+    }
+    button {
+        padding: 8px 15px;
+        font-size: 15px;
+    }
+}
