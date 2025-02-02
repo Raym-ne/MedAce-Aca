@@ -453,7 +453,6 @@ document.getElementById("submit-btn").addEventListener("click", function() {
     } else {
         feedbackContainer.textContent = "Incorrect.";
     }
-    const explanationsContainer = document.createElement("div");
     
     quizData[currentQuestion].options.forEach((option, index) => {
         const explanationElement = document.createElement("p");
@@ -461,10 +460,14 @@ document.getElementById("submit-btn").addEventListener("click", function() {
         explanationsContainer.appendChild(explanationElement);
     });
 
-    feedbackContainer.appendChild(explanationsContainer);
-
     document.getElementById("submit-btn").style.display = "none";
     document.getElementById("next-btn").style.display = "block";
+
+     if (currentQuestion === quizData.length - 1) {
+        document.getElementById("next-btn").textContent = "Finish";
+        const score = quizData[currentQuestion].correct ? score + 1 : score;
+        window.location.replace('results.html?score=${score}$total=${quizData.length');
+    }
 });
 
 document.getElementById("next-btn").addEventListener("click", function() {
